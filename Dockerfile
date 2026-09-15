@@ -1,8 +1,9 @@
 FROM ubuntu:latest
 FROM eclipse-temurin:26
+FROM eclipse-temurin:26-jre
 
-COPY ./target/classes/com /tmp/com
+COPY ./target/seMethods-1.0-SNAPSHOT-jar-with-dependencies.jar /app/app.jar
 
-WORKDIR /tmp
+WORKDIR /app
 
-ENTRYPOINT ["java", "com.napier.sem.App"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
