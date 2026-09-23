@@ -38,7 +38,7 @@ public class App
 
                 // Connect to database
                 con = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:33061/employees?allowPublicKeyRetrieval=true&useSSL=false",
+                        "jdbc:mysql://db:3306/employees?allowPublicKeyRetrieval=true&useSSL=false",
                         "root",
                         "example"
                 );
